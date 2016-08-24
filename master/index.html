@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Car Demo</title>
+	 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="sliderSpeedHead">Increase Speed</div><br/><br/>
+<div id="slider"></div>
+	<div id="container">
+		<div id="carBody"></div>
+		<div id="frontWheel"></div>
+		<div id="backWheel"></div>
+		<!-- <div id="smoke1"></div> -->
+		<div id="smoke2"></div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			 $( "#slider" ).slider({
+			 	range: "max",
+      min: 0,
+      max: 10,
+      value: 0,
+      step:2,
+      slide: function( event, ui ) {
+        switch(ui.value)
+        {
+        	case 0:
+        		{
+        			$('body').css('animation', 'MoveCar 20s linear 0s infinite');
+        			$('body').css('-moz-animation', 'MoveCar 20s linear 0s infinite');
+        			$('body').css('-webkit-animation', 'MoveCar 20s linear 0s infinite');
+	   		}
+        	break;
+        	case 2:
+        	{
+$('body').css('animation', 'MoveCar 12s linear 0s infinite');
+        			$('body').css('-moz-animation', 'MoveCar 12s linear 0s infinite');
+        			$('body').css('-webkit-animation', 'MoveCar 12s linear 0s infinite');
+        	}
+        	break;
+        	case 4:
+{
+	$('body').css('animation', 'MoveCar 8s linear 0s infinite');
+        			$('body').css('-moz-animation', 'MoveCar 8s linear 0s infinite');
+        			$('body').css('-webkit-animation', 'MoveCar 8s linear 0s infinite');
+}
+        	break;
+        	case 8:
+{
+	$('body').css('animation', 'MoveCar 4s linear 0s infinite');
+        			$('body').css('-moz-animation', 'MoveCar 4s linear 0s infinite');
+        			$('body').css('-webkit-animation', 'MoveCar 4s linear 0s infinite');
+}
+        	break;
+        	case 10:
+{
+	$('body').css('animation', 'MoveCar 1s linear 0s infinite');
+        			$('body').css('-moz-animation', 'MoveCar 1s linear 0s infinite');
+        			$('body').css('-webkit-animation', 'MoveCar 1s linear 0s infinite');
+}
+        	break;
+        }
+      }
+	});
+$('#carBody').click(function(){
+	$('body').toggleClass('pause');
+	$('#frontWheel').toggleClass('pause');
+	$('#backWheel').toggleClass('pause');
+});
+		});
+	</script>
+	
+</body>
+</html>

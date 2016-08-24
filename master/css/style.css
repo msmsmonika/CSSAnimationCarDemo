@@ -1,0 +1,127 @@
+body
+{
+	background: #000 url('../img/bg.jpg') repeat-x 0 0;
+	height: 100%;
+	animation: MoveCar 20s linear 0s infinite;
+	-moz-animation: MoveCar 20s linear 0s infinite;
+	-webkit-animation: MoveCar 20s linear 0s infinite;
+}
+#sliderSpeedHead{
+	float: right;
+	width: 40%;
+	text-align: center;
+	margin-right: 50px;
+}
+.ui-slider
+{
+	    background: #cbcfd0;
+	    width: 40%;
+	    float: right;
+	    margin-right: 50px;
+}
+.ui-slider-handle{
+	    background: #797474;
+}
+#container
+{
+	
+	margin: 93px auto;
+	width: 960px;
+	overflow: visible;
+}
+#carBody
+{
+	background: url('../img/carWithoutWheel.png') no-repeat;
+	width:960px;
+	height: 480px;
+	margin: auto;
+}
+#frontWheel
+{
+	animation: TurnWheel 15s linear 0s infinite;
+	-moz-animation: TurnWheel 15s linear 0s infinite;
+	-webkit-animation: TurnWheel 15s linear 0s infinite;
+	background: url('../img/wheel.png') no-repeat;
+	float: left;
+	height: 128px;
+	width: 127px;
+	    margin-left: 174px;
+    margin-top: -243px;
+}
+#backWheel
+{
+	animation: TurnWheel 15s linear 0s infinite;
+	-moz-animation: TurnWheel 15s linear 0s infinite;
+	-webkit-animation: TurnWheel 15s linear 0s infinite;
+	background: url('../img/wheel.png') no-repeat;
+	float: right;
+	height: 128px;
+	width: 127px;
+    margin-right: 173px;
+    margin-top: -252px;
+}
+#smoke1
+{
+	animation: SmokeMove 5s linear 0s infinite;
+	-moz-animation: TurnWheel 15s linear 0s infinite;
+	-webkit-animation: TurnWheel 15s linear 0s infinite;
+	background: url('../img/smoke1.png') no-repeat;
+	float: right;
+	height: 128px;
+	width: 127px;
+    margin-right: 173px;
+    margin-top: -252px;
+}
+#smoke2
+{
+	animation: SmokeMove 5s linear 0s infinite;
+	-moz-animation: SmokeMove 5s linear 0s infinite;
+	-webkit-animation: SmokeMove 5s linear 0s infinite;
+	background: url('../img/smoke.png') no-repeat;
+	float: left;
+    height: 128px;
+    width: 127px;
+    margin-left: 3px;
+    margin-top: -289px;;
+}
+.pause
+{
+	animation-play-state: paused !important;
+	-moz-animation-play-state: paused !important;
+	-webkit-animation-play-state: paused !important;
+}
+@keyframes SmokeMove
+{
+0%{transform: translateY(0px);}
+	100%{transform: translate(-15px,-15px);}
+}
+@keyframes MoveCar
+{
+	0%{background-position: 0px 0px;}
+	100%{background-position: -1000px 0px;}
+}
+@-moz-keyframes MoveCar
+{
+	0%{background-position: 0px 0px;}
+	100%{background-position: -1000px 0px;}
+}
+@-webkit-keyframes MoveCar
+{
+	0%{background-position: 0px 0px;}
+	100%{background-position: -1000px 0px;}
+}
+@keyframes TurnWheel
+{
+	0%{transform: rotate(0deg)}
+	100%{transform: rotate(360deg)}
+}
+@-moz-keyframes TurnWheel
+{
+	0%{transform: rotate(0deg)}
+	100%{transform: rotate(360deg)}
+}
+@-webkit-keyframes TurnWheel
+{
+	0%{transform: rotate(0deg)}
+	100%{transform: rotate(360deg)}
+}
